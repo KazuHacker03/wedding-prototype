@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>You are Invited - Eriel &amp; Dexter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Floating petals layer -->
+  <div class="petals" id="petals" aria-hidden="true"></div>
+  <!-- Reusable floral bouquet -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="bouquet" viewBox="0 0 300 260">
+        <!-- Eucalyptus / leaf sprigs -->
+        <g fill="#6f8f6a">
+          <path d="M18 232 Q55 186 118 198 Q82 224 18 232Z"/>
+          <path d="M34 182 Q66 146 124 158 Q92 186 34 182Z"/>
+          <path d="M14 136 Q46 114 96 130 Q62 150 14 136Z"/>
+          <path d="M120 246 Q156 214 214 226 Q176 250 120 246Z"/>
+          <path d="M206 218 Q246 176 294 192 Q252 218 206 218Z"/>
+          <path d="M150 120 Q176 96 214 104 Q190 126 150 120Z"/>
+        </g>
+        <g fill="#9fbb93">
+          <path d="M62 210 Q92 186 136 198 Q104 214 62 210Z"/>
+          <path d="M176 240 Q206 210 250 220 Q218 240 176 240Z"/>
+          <path d="M40 160 Q66 140 104 150 Q78 168 40 160Z"/>
+        </g>
+        <!-- Stems -->
+        <g fill="none" stroke="#5a7150" stroke-width="2" stroke-linecap="round">
+          <path d="M18 232 Q90 200 146 158"/>
+          <path d="M120 246 Q172 206 182 128"/>
+          <path d="M206 218 Q236 170 216 110"/>
+          <path d="M34 182 Q70 160 96 210"/>
+        </g>
+        <!-- Peony (large, center) -->
+        <g>
+          <circle cx="146" cy="156" r="30" fill="#b5737a"/>
+          <circle cx="146" cy="156" r="24" fill="#c98a8f"/>
+          <circle cx="140" cy="152" r="16" fill="#ecc7c4"/>
+          <circle cx="142" cy="150" r="8" fill="#f6e3df"/>
+          <circle cx="146" cy="156" r="3" fill="#7a4f55"/>
+        </g>
+        <!-- Peony (bottom) -->
+        <g>
+          <circle cx="98" cy="208" r="24" fill="#b5737a"/>
+          <circle cx="98" cy="208" r="18" fill="#c98a8f"/>
+          <circle cx="95" cy="205" r="11" fill="#efd0cc"/>
+          <circle cx="98" cy="208" r="3" fill="#7a4f55"/>
+        </g>
+        <!-- Rose (top right of bouquet) -->
+        <g>
+          <circle cx="182" cy="124" r="20" fill="#9c5f66"/>
+          <circle cx="182" cy="124" r="13" fill="#c98a8f"/>
+          <circle cx="180" cy="122" r="6" fill="#e8b9b6"/>
+        </g>
+        <!-- Blue blossoms -->
+        <g fill="#efd0cc">
+          <circle cx="234" cy="206" r="13"/>
+          <circle cx="62" cy="130" r="10"/>
+          <circle cx="210" cy="150" r="9"/>
+          <circle cx="252" cy="172" r="7"/>
+        </g>
+        <g fill="#fbf1ec">
+          <circle cx="234" cy="206" r="4"/>
+          <circle cx="62" cy="130" r="3"/>
+          <circle cx="210" cy="150" r="3"/>
+        </g>
+        <!-- Small buds -->
+        <g fill="#cf9aa0">
+          <circle cx="30" cy="104" r="5"/>
+          <circle cx="268" cy="130" r="5"/>
+          <circle cx="170" cy="252" r="4"/>
+          <circle cx="76" cy="248" r="4"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <main class="scene" id="scene">
+    <p class="invite-text">You are invited !</p>
+
+    <div class="envelope" id="envelope">
+      <!-- Invitation card (monogram) -->
+      <div class="card">
+        <img src="wedding.jpg" alt="Eriel and Dexter monogram E and D, 19.02.2027">
+      </div>
+
+      <!-- Envelope body -->
+      <div class="envelope-back"></div>
+      <div class="envelope-front"></div>
+
+      <!-- Flower bouquets -->
+      <svg class="bouquet bq-bl" viewBox="0 0 300 260" aria-hidden="true">
+        <use href="#bouquet" width="300" height="260"/>
+      </svg>
+      <svg class="bouquet bq-tr" viewBox="0 0 300 260" aria-hidden="true">
+        <use href="#bouquet" width="300" height="260"/>
+      </svg>
+
+      <!-- Butterfly -->
+      <svg class="butterfly" viewBox="0 0 60 50" aria-hidden="true">
+        <path d="M30 26 C20 4 2 6 4 20 C6 30 22 30 30 26Z" fill="#e3b96e" opacity="0.9"/>
+        <path d="M30 26 C40 4 58 6 56 20 C54 30 38 30 30 26Z" fill="#f0d48f" opacity="0.9"/>
+        <path d="M30 26 C22 34 12 44 14 48 C18 48 26 36 30 26Z" fill="#c99a4e" opacity="0.85"/>
+        <path d="M30 26 C38 34 48 44 46 48 C42 48 34 36 30 26Z" fill="#c99a4e" opacity="0.85"/>
+        <line x1="30" y1="14" x2="30" y2="38" stroke="#7a4f55" stroke-width="1.5"/>
+      </svg>
+
+      <!-- Flap -->
+      <div class="flap" id="flap"></div>
+
+      <!-- Gold wax seal -->
+      <div class="seal" aria-hidden="true">
+        <img src="wedding.jpg" alt="">
+      </div>
+    </div>
+
+    <div class="hint-wrap">
+      <p class="hint" id="hint">Click to open...</p>
+      <a class="hint continue-hint" id="continue-hint" href="menu.html">Click to continue...</a>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      // Floating petals in the background
+      var petalLayer = document.getElementById('petals');
+      var petalCount = window.innerWidth < 600 ? 8 : 18;
+      for (var i = 0; i < petalCount; i++) {
+        var p = document.createElement('span');
+        p.className = 'petal';
+        p.style.setProperty('--x', (Math.random() * 100).toFixed(1) + 'vw');
+        p.style.setProperty('--size', (8 + Math.random() * 8).toFixed(1) + 'px');
+        p.style.setProperty('--dur', (10 + Math.random() * 9).toFixed(1) + 's');
+        p.style.setProperty('--delay', (Math.random() * 12).toFixed(1) + 's');
+        p.style.setProperty('--drift', (Math.random() * 120 - 60).toFixed(0) + 'px');
+        petalLayer.appendChild(p);
+      }
+
+      var scene = document.getElementById('scene');
+      var envelope = document.getElementById('envelope');
+      var hint = document.getElementById('hint');
+      var opened = false;
+
+      function openInvitation() {
+        if (opened) return;
+        opened = true;
+        envelope.classList.add('open');
+        scene.classList.add('opened');
+        hint.classList.add('hide');
+      }
+
+      scene.addEventListener('click', openInvitation);
+      scene.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openInvitation();
+        }
+      });
+      scene.setAttribute('tabindex', '0');
+    })();
+  </script>
+</body>
+</html>
