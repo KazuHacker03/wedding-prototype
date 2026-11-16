@@ -1,8 +1,8 @@
 :root {
-  --navy: #e6bdb6;
-  --navy-deep: #c99a92;
-  --navy-flap: #f2d9d3;
-  --ink: #7a4f55;
+  --navy: #1c2a46;
+  --navy-deep: #141f36;
+  --navy-flap: #243556;
+  --ink: #1d2a44;
   --gold-1: #f5e1a4;
   --gold-2: #d4a955;
   --gold-3: #9a6f2c;
@@ -17,7 +17,7 @@ body {
   min-height: 100dvh;
   -webkit-tap-highlight-color: transparent;
   background:
-    radial-gradient(ellipse at 50% 35%, #fffdf9 0%, #fbf3ee 60%, #f1e2dc 100%);
+    radial-gradient(ellipse at 50% 35%, #ffffff 0%, #f1f5fa 60%, #e4ecf5 100%);
   font-family: "Didot", "Bodoni 72", "Playfair Display", Georgia, serif;
   color: var(--ink);
   display: flex;
@@ -60,13 +60,13 @@ body {
   inset: 0;
   background: var(--navy-deep);
   border-radius: 4px;
-  box-shadow: 0 22px 45px rgba(140, 90, 85, 0.30);
+  box-shadow: 0 22px 45px rgba(20, 31, 54, 0.35);
 }
 
 .envelope-front {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, var(--navy) 0%, #dfb0a8 100%);
+  background: linear-gradient(180deg, var(--navy) 0%, #1a2843 100%);
   border-radius: 4px;
   clip-path: polygon(0 0, 50% 55%, 100% 0, 100% 100%, 0 100%);
   z-index: 3;
@@ -79,7 +79,7 @@ body {
   left: 0;
   width: 100%;
   height: 58%;
-  background: linear-gradient(180deg, #f8e6e1 0%, var(--navy-flap) 100%);
+  background: linear-gradient(180deg, #2a3c60 0%, var(--navy-flap) 100%);
   clip-path: polygon(0 0, 100% 0, 50% 100%);
   transform-origin: top center;
   transform: rotateX(0deg);
@@ -311,7 +311,7 @@ body {
   width: var(--size);
   height: calc(var(--size) * 1.4);
   border-radius: 0 100% 0 100%;
-  background: radial-gradient(ellipse at 30% 30%, #fff4f1 0%, #ecc0bb 60%, #d9a3a6 100%);
+  background: radial-gradient(ellipse at 30% 30%, #e4eef8 0%, #7fb1e0 60%, #4d7fae 100%);
   opacity: 0;
   animation: petal-fall var(--dur) linear var(--delay) infinite;
 }
